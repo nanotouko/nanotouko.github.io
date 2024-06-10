@@ -227,6 +227,7 @@ button:hover {
 
 .social-links__button.twitter {
     background-color: #1DA1F2;
+    color: #fff;
 }
 .social-links__button.pixiv {
     background-color: #009cff;
@@ -238,6 +239,10 @@ button:hover {
 .social-links__button.deviantart {
     background-color: #06070d;
     color: #00e59b;
+}
+.social-links__button.discord {
+    background-color: #5865f2;
+    color: #fff;
 }
 
 @keyframes wipe-in-up {
