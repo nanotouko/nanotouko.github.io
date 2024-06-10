@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="nanotouko's interactive commission sheet">
+    <title>Commission Sheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="res/css/main.min.css">
+    <script src="res/js/jquery-3.7.1.min.js"></script>
+    <script src="res/js/main.min.js"></script>
+</head>
+<body>
+    <div style="margin:16px;">
+        <div style="margin: 0 auto; max-width: 1080px;">
+            <h2>Commission Sheet</h2>
+            <div class="final-price" style="width: fit-content; margin: 0 auto; margin-bottom: 8px;">Status: CLOSED</div>
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-container__image">
+                        <div class="image-container">
+                            <div id="background"></div>
+                            <div id="img-micchan-lineart" style="display: none;"></div>
+                            <div id="img-micchan-flat" style="display: none;"></div>
+                            <div id="img-micchan-colored" style="display: none;"></div>
+                            <div id="dynamic-canvas-size">
+                                <div class="dim-overlay">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-container__buttons">
+                        <div id="btnGroup__style" class="button-group">
+                            <button id="btn-lineart" class="button" data-style="lineart" data-price="10"><strong>Lineart</strong> (+$10)</button>
+                            <button id="btn-flat" class="button" data-style="flat" data-price="20"><strong>Flat Colors</strong> (+$20)</button>
+                            <button id="btn-colored" class="button" data-style="colored" data-price="30"><strong>Shaded Colors</strong> (+$30)</button>
+                        </div>
+                        <div id="btnGroup__size" class="button-group">
+                            <button id="btn-head" class="button" data-size="head" data-price="5"><strong>Headshot</strong> (+$5)</button>
+                            <button id="btn-bust" class="button" data-size="bust" data-price="10"><strong>Bust Shot</strong> (+$10)</button>
+                            <button id="btn-cowboy" class="button" data-size="cowboy" data-price="20"><strong>Cowboy Shot</strong> (+$20)</button>
+                            <button id="btn-full" class="button" data-size="full" data-price="30"><strong>Full Body</strong> (+$30)</button>
+                        </div>
+                        <div class="button-group">
+                            <button id="btnToggle" class="button" data-price="5"><b>Toggle Background</b> (+$5)</button>
+                        </div>
+                        <div style="text-align: center; margin-top: 48px;">
+                            <div style="margin-bottom: 48px;">
+                                Total Price:&ensp;
+                                <span class="final-price">
+                                    $<span id="lblFinalPrice"></span>
+                                </span>
+                            </div>
+                            <p style="margin-bottom: 8px;">DM me on <b>Discord</b> if interested ❤️</p>
+                            <div class="discord-contact">
+                                <i class="fa-brands fa-discord"></i>&ensp;@nanotouko9543
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="grid-container-2">
+                <div class="grid-container__notes">
+                    <h2>Notes</h2>
+                    <ul>
+                        <li>All transactions are via PayPal. I will create an invoice first.</li>
+                        <li>The deadline is 90 days after the payment. If I'm not finished by the deadline, 100% of the payment will be refunded.</li>
+                        <li>I can only do one character per commission at the moment.</li>
+                        <li>Do submit references and details! It would make my life easier &colon;&rpar;</li>
+                        <li>Depending on the design complexity, I might adjust the price.</li>
+                        <li>Please hit me up on the commission status! I'm a pretty busy person myself but I promise I'll work on it &gt;&lt;</li>
+                    </ul>
+                </div>
+                <div class="grid-container__terms">
+                    <div class="grid-container__terms__do">
+                        <div class="header">WILL DRAW</div>
+                        <div class="data">Normal art</div>
+                        <div class="data">Modular body magic</div>
+                        <div class="data">Contortion</div>
+                        <div class="data">Semi-furry</div>
+                        <div class="data">Light ecchi</div>
+                    </div>
+                    <div class="grid-container__terms__dont">
+                        <div class="header">WILL NOT DRAW</div>
+                        <div class="data">Furry</div>
+                        <div class="data">Muscular</div>
+                        <div class="data">Mecha</div>
+                        <div class="data">Ero and guro</div>
+                        <div class="data">Realistic</div>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <p>Follow me on these sites!</p>
+                <div class="social-links__btnGroup">
+                    <a href="https://twitter.com/nanotouko" aria-label="twitter" target="_blank">
+                        <div class="social-links__button twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                            <span style="display: none">Twitter</span>
+                        </div>
+                    </a>
+                    <a href="https://www.pixiv.net/users/82554852" aria-label="pixiv" target="_blank">
+                        <div class="social-links__button pixiv">
+                            <span style="display: none">Pixiv</span>
+                        </div>
+                    </a>
+                    <a href="https://deviantart.com/nanotouko" aria-label="deviantart" target="_blank">
+                        <div class="social-links__button deviantart">
+                            <i class="fa-brands fa-deviantart"></i>
+                            <span style="display: none">DeviantArt</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
